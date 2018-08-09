@@ -1,4 +1,4 @@
-class Song{
+class Album{
 
 	get(firebaseapp, req, res){
 		const https = require('https')
@@ -16,22 +16,26 @@ class Song{
 		}
 	}
 
-	song(snap){
-		var song = []
-		for(var item in snap){
-			for(var itemChild in snap[item].song){
+	album(snap){
+		var album = []
+		for(var item in snap.album){
+			var song = []
+			for(var itemChil in snap.album[item].song){
 				song.push({
-					key: itemChild,
-					name: snap[item].song[itemChild].name,
-					album: snap[item].name,
-					genre: snap[item].genre,
-					year: snap[item].year,
-					label: snap[item].label,
-					lyrics: snap[item].song[itemChild].lyrics
+					key: itemChil,
+					name: snap.album[item].song[itemChil].name
 				})
-			}
+			} 
+			album.push({
+				key: item,
+				name: snap.album[item].name,
+				genre: snap.album[item].genre,
+				label: snap.album[item].label,
+				year: snap.album[item].year,
+				song: song
+			})
 		}
-		return song
+		return album
 	}
 
 	blackpink(firebaseapp, https, req, res){
@@ -42,14 +46,15 @@ class Song{
 			//each child of root
 			snap.forEach(child =>{
 				if(child.val().name == 'blackpink'){
+					
 					res.json({
 						idol: name,
-						song: this.song(child.val().album)
+						album: this.album(child.val())
 					})
 					res.end()
 					console.log({
 						idol: name,
-						song: this.song(child.val().album)
+						album: this.album(child.val())
 					})
 				}
 			})
@@ -66,4 +71,4 @@ class Song{
 
 }
 
-module.exports = Song
+module.exports = Album

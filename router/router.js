@@ -3,6 +3,7 @@ class Router{
 		var idol = require('../app_modules/idol')
 		var profile = require('../app_modules/profile')
 		var song = require('../app_modules/song')
+		var album = require('../app_modules/album')
 		app.set('view engine', 'pug')
 		app.get('/', (req, res) =>{
 			res.send('wellcome')
@@ -26,8 +27,7 @@ class Router{
 		})
 
 		app.get('/v1/album', (req, res) =>{
-			res.send('album')
-			res.end()
+			var albumapp = new album().get(firebaseapp, req, res)
 		})
 
 		app.get('/v1/mv', (req, res) =>{
