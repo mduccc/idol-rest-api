@@ -1,0 +1,28 @@
+extends header
+
+block content
+	header
+		h5 Rest-api manager
+	main
+		div.select-idol-div
+			div.select-idol-div-child
+				p.select-idol-text Select Idol
+				select.idol-select
+					option
+				p.select-idol-p.select-idol-p-first Profile
+				p.select-idol-p Song
+				P.select-idol-p Album
+				p.select-idol-p Mv
+		div.group-idol
+			div.profile-div
+				p.profile-text Profile
+				textarea.profile-textarea
+				button.profile-btn-update Update
+			div.song-div
+				p.song-text Song
+			div.album-div
+				p.album-text Album
+			div.mv-div
+				p.mv-text Mv
+	script
+		include ../js/ajax.js

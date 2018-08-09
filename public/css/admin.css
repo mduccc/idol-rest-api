@@ -1,0 +1,153 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: arial;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+
+header{
+	position: initial;
+	width: 100%;
+	height: 5%;
+	background-color: #ff0266;
+	align-items: center;
+    justify-content: center;
+    display:flex;
+}
+
+main{
+	position: initial;
+	width: 70%;
+	height: 100%;
+	min-width: 600px;
+	min-height: 400px;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5%;
+	border: 1px solid #ff0266;
+}
+
+h5{
+	color: white;
+}
+
+.select-idol-div{
+	position: initial;
+	width: 20%;
+	height: 100%;
+	margin-left: 0;
+	margin-top: 0;
+	border: 1px solid #ff0266;
+	float: left;
+}
+
+.select-idol-text, .profile-text, .song-text, .album-text, .mv-text{
+	color: #ff0266;
+	font-weight: bold;
+}
+
+
+.group-idol{
+	position: initial;
+	width: 75%;
+	height: 100%;
+	margin-left: 25%;
+	border: 1px solid #ff0266;
+}
+
+.profile-div{
+	position: initial;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #ff0266;
+	overflow: auto;
+}
+.song-div{
+	position: initial;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #ff0266;
+	overflow: auto;
+	display: none;
+}
+.album-div{
+	position: initial;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #ff0266;
+	overflow: auto;
+	display: none;
+}
+
+.mv-div{
+	position: initial;
+	width: 100%;
+	height: 90%;
+	border: 1px solid #ff0266;
+	overflow: auto;
+	display: none;
+}
+
+.select-idol-div-child{
+	position: initial;
+	width: 100%;
+	border: 1px solid #ff0266;
+	justify-content: center;
+	text-align: center;
+	margin-top: 5%;
+}
+
+.idol-select{
+	position: initial;
+	display: block;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	color: #ff0266;
+	border: 1px solid #ff0266;
+	background-color: white;
+}
+
+textarea{
+	position: initial;
+	width: 95%;
+	height: 85%;
+	resize:vertical;
+	margin-top: 3%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: left;
+	display: block;
+}
+
+.select-idol-p{
+	margin-top: 2%;
+	color: #ff0266;
+	cursor: pointer;
+}
+
+.select-idol-p-first {
+	margin-top: 20%;
+}
+
+.profile-btn-update{
+	position: initial;
+	width: 70px;
+	height: 30px;
+	background-color: #ff0266;
+	color: white;
+	border: 1px solid #ff0266;
+	margin-top: 3%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	cursor: pointer;
+}
