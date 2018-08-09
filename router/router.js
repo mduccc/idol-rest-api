@@ -4,6 +4,7 @@ class Router{
 		var profile = require('../app_modules/v1/profile')
 		var song = require('../app_modules/v1/song')
 		var album = require('../app_modules/v1/album')
+		var mv = require('../app_modules/v1/mv')
 		app.set('view engine', 'pug')
 		app.get('/', (req, res) =>{
 			res.send('wellcome')
@@ -31,8 +32,7 @@ class Router{
 		})
 
 		app.get('/v1/mv', (req, res) =>{
-			res.send('mv')
-			res.end()
+			var mvapp = new mv().get(firebaseapp, req, res)
 		})
 
 	}
