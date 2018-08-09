@@ -19,18 +19,36 @@ class Profile{
 	member(snap){
 		var member = []
 		for(var item in snap){
-			var info = {
-				stage_name: snap[item].stage_name,
-				fullname: snap[item].fullname,
-				birthday:  snap[item].birthday,
-				height:  snap[item].height + ' m',
-				nationality: snap[item].nationality,
-				place_of_birth: snap[item].place_of_birth,
-				postion: snap[item].postion,
-				instagram: snap[item].instagram,
-				group: snap[item].group,
-				image_profile: snap[item].image_profile
+			if(snap[item].education){
+				var info = {
+					stage_name: snap[item].stage_name,
+					fullname: snap[item].fullname,
+					birthday:  snap[item].birthday,
+					height:  snap[item].height + ' m',
+					nationality: snap[item].nationality,
+					place_of_birth: snap[item].place_of_birth,
+					postion: snap[item].postion,
+					instagram: snap[item].instagram,
+					group: snap[item].group,
+					education: snap[item].education,
+					image_profile: snap[item].image_profile
+				}
+			}else{
+				var info = {
+					stage_name: snap[item].stage_name,
+					fullname: snap[item].fullname,
+					birthday:  snap[item].birthday,
+					height:  snap[item].height + ' m',
+					nationality: snap[item].nationality,
+					place_of_birth: snap[item].place_of_birth,
+					postion: snap[item].postion,
+					instagram: snap[item].instagram,
+					group: snap[item].group,
+					education: null,
+					image_profile: snap[item].image_profile
+				}
 			}
+			
 		
 			member.push({
 				key: item,
