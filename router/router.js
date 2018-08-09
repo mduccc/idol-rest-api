@@ -1,9 +1,9 @@
 class Router{
 	go(app, firebaseapp){
-		var idol = require('../app_modules/idol')
-		var profile = require('../app_modules/profile')
-		var song = require('../app_modules/song')
-		var album = require('../app_modules/album')
+		var idol = require('../app_modules/v1/idol')
+		var profile = require('../app_modules/v1/profile')
+		var song = require('../app_modules/v1/song')
+		var album = require('../app_modules/v1/album')
 		app.set('view engine', 'pug')
 		app.get('/', (req, res) =>{
 			res.send('wellcome')
