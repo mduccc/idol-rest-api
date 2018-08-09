@@ -27,6 +27,7 @@ class Song{
 					genre: snap[item].genre,
 					year: snap[item].year,
 					label: snap[item].label,
+					youtube: snap[item].song[itemChild].youtube,
 					lyrics: snap[item].song[itemChild].lyrics
 				})
 			}
