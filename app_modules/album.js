@@ -64,7 +64,7 @@ class Album{
 	null(req, res){
 		res.json({
 			idol: null,
-			song:[]
+			album: []
 		})
 		res.end()
 	}
